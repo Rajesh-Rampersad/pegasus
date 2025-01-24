@@ -1,28 +1,41 @@
-import CarouselBanner from "@/components/carrusel";
-import CoverParticles from "@/components/cover-particles";
-import Image from "next/image";
+"use client"
+import { Banner } from '@/components/banner/banner'
+import { Header } from '@/components/Header/Header'
+// import { About } from '@/components/About'
+// import { Banner } from '@/components/Banner'
+// import { Footer } from '@/components/Footer'
+// import { JoinCommunity } from '@/components/JoinCommunity'
+// import { Properties } from '@/components/Properties'
+// import { Services } from '@/components/Services'
+import { TransitionPage } from '@/components/TransitionPage'
+
+import dynamic from "next/dynamic"
+
+// const LocationMap = dynamic(
+//   () => import('../components/Location').then(module => module.Location),
+//   {
+//     ssr: false
+//   }
+// )
 
 export default function Home() {
 
-    return (
-      <div className="h-screen bg-gradient-cover flex flex-col items-center justify-center text-center text-foreground">
-        <CoverParticles />
-        {/* <Image
-          src="/pegasus1.jpg"
-          alt="PegasusSportware Logo"
-          width={200}
-          height={200}
-          className="mb-4"
-        /> */}
-        <h1 className="text-5xl font-bold mb-4">
-          Bienvenido a PegasusSportware
-        </h1>
-        <p className="text-lg max-w-xl">
-          Confección de ropa deportiva y sublimación personalizada. También
-          ofrecemos banderas, gorras, camisas deportivas y empresariales.
-        </p>
-        <CarouselBanner />
-        
-      </div>
-    );
+  return (
+    <>
+      <TransitionPage />
+      <Header />
+
+      <main>
+        <Banner />
+        {/* <Properties />
+        <div className="max-w-6xl mx-auto">
+          <Services />
+          <LocationMap />
+          <About />
+        </div>
+        <JoinCommunity />
+        <Footer /> */}
+      </main>
+    </>
+  )
 }

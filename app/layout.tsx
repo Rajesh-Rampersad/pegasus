@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
-import Navbar from "@/components/navbar";
+import Image from "next/image";
+
+
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -52,24 +54,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        {/* Viewport metaetiqueta para diseño responsivo */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body
-        className={`${urbanist.variable} antialiased`}
-        style={{ colorScheme: "dark" }} // Sincroniza el tema para evitar desincronización
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
+      <body className={`${urbanist.variable} antialiased text-white relative h-screen w-full`}>
+        {/* Imagen de fondo */}
+        <Image
+          src="/blackGrey.jpg" // Reemplaza con la ruta correcta de tu imagen
+          alt="Fondo PegasusSportware"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="-z-10"
+        />
+        
+        {/* Contenido de la app */}
+        <div className="relative z-10">
           {children}
-        </ThemeProvider>
+        </div>
       </body>
     </html>
   );
