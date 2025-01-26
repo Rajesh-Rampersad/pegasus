@@ -2,6 +2,6 @@
 
 export function SearchProperty() {
   return(
-    <div className="search-property text-black">SearchProperty</div>
+    <div className="search-property text-white">SearchProperty</div>
   )
 }

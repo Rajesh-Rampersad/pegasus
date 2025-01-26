@@ -9,6 +9,7 @@ import dynamic from "next/dynamic"
 import { Properties } from '@/components/Properties/Properties'
 import { JoinCommunity } from '@/components/JoinCommunity'
 import { Footer } from '@/components/Footer'
+import { FloatedSearch } from '@/components/FloatedSearch'
 
 
 const LocationMap = dynamic(

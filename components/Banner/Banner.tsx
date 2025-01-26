@@ -8,11 +8,12 @@ export function Banner() {
       <div className="relative w-full h-[80vh] rounded-3xl overflow-hidden">
         {/* Imagen de fondo */}
         <Image
-          src="/pngwing.com.png"
-          alt="Banner"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-3xl"
+         src="/banner.jpeg" // Imagem otimizada
+         alt="Banner"
+         layout="fill"
+         objectFit="cover"
+         quality={100} // Ajuste a qualidade conforme necessário
+         className="rounded-3xl"
         />
 
         {/* Contenedor del texto sobre la imagen */}
@@ -23,8 +24,9 @@ export function Banner() {
           <p className="text-white font-semibold max-w-2xl mt-4 drop-shadow-lg">
             Com mais de 6 anos de experiência na produção de uniformes esportivos em todas as modalidades, trazendo a melhor qualidade e serviços aos nossos clientes.
           </p>
+          <FloatedSearch />
         </div>
-        <FloatedSearch />
+      
       </div>
     </div>
   );
