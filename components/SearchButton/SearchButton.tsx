@@ -2,6 +2,6 @@
 
 export function SearchButton() {
   return (
-    <button className="text-black">SearchButton</button>
+    <button className="text-white">SearchButton</button>
   )
 }

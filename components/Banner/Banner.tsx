@@ -17,6 +17,7 @@ export function Banner() {
         />
 
         {/* Contenedor del texto sobre la imagen */}
+        <FloatedSearch />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-5 bg-black/50 rounded-3xl">
           <h1 className="text-3xl text-white font-bold drop-shadow-lg">
             Pegasus Sportware - Roupa Esportiva e Sublimação
@@ -24,7 +25,7 @@ export function Banner() {
           <p className="text-white font-semibold max-w-2xl mt-4 drop-shadow-lg">
             Com mais de 6 anos de experiência na produção de uniformes esportivos em todas as modalidades, trazendo a melhor qualidade e serviços aos nossos clientes.
           </p>
-          <FloatedSearch />
+        
         </div>
       
       </div>
